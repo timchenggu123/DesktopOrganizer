@@ -3,7 +3,7 @@
 import os
 import glob
 desk = 'C:\\Users\\TimGu\\Desktop'
-typ = ['pdf', 'docx', 'mis','rtf']
+typ = ['pdf', 'docx', 'mis','rtf'] # You can customize this list to include different file extension'
 content = os.listdir(desk)
 # This creates a directory if it is not on desktop
 for folder in typ:
