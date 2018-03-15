@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 This is a simple tool for managing desktop space.
 
 Right now this version will create folders on windows computer desktop based on file types .docx, .rtf, .pdf. Files with these extension names are put into corresponding folders. There is also an extra folder called 'mis' which contains miscellaneous files. The mis folder records the file extensions of the files that already exit inside it in a text file with extension '.fc'. files on the desktop with extensions that match those in the '.fc' file will be pulled into 'mis' folder everytime the program runs. 
@@ -10,4 +9,3 @@ The mis folder can contain multiple different extensions. To reset the folder, s
 =======
 ## About
 This is a simple tool to help you organize files on your computer desktop based on the file extension. 
->>>>>>> 3df758ca1c89e64ca643c8c4afa9cc270d8d8acc
