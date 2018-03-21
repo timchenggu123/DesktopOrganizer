@@ -4,7 +4,7 @@ import os
 import glob
 
 # Creating Constant variables
-desk = 'C:\\Users\\TimGu\\Desktop'
+desk = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop')
 typ = ['pdf', 'docx', 'mis','rtf']                                               # You can customize this list to include different file extension'
 content = os.listdir(desk)
 
@@ -33,7 +33,8 @@ def updatefc(folder):
             extbank.write(ext + '\n')
     extbank.close()
 
-def grabfiles(folder):
+def grabfiles(foldername):
+    folder = desk + '\\' + foldername
     i = 1
     extbank = open(folder + "\\" + 'extbank.fc','r')
     extlist = extbank.readlines()
@@ -55,7 +56,7 @@ def grabfiles(folder):
 
 # creating new folders
 while True:
-    foldername = input("Please enter the name of the smart folder to create a new one. To skip or proceed, hit enter")
+    foldername = input("Please enter the name of the smart folder to create a new one. To skip or proceed, hit enter\n")
     print(bool(foldername))
     if not bool(foldername):
         break
@@ -76,7 +77,10 @@ for path in content:
     if path.find('[!smart!]') > 0:
         print(path.find('[!smart!]!'))
         print(path)
-        folder = folder = desk + "\\" + path
+        folder = desk + "\\" + path
         createfc(folder)
         updatefc(folder)
-        grabfiles(folder)
+        grabfiles(path)
+
+# Finishing the job
+wait = input('All done! Hit enter to exit')
