@@ -1,7 +1,12 @@
-This is a simple tool for managing desktop space.
+# Smart Folder (Desktop Organizer 2.0)
 
-Right now this version will create folders on windows computer desktop based on file types .docx, .rtf, .pdf. Files with these extension names are put into corresponding folders. There is also an extra folder called 'mis' which contains miscellaneous files. The mis folder records the file extensions of the files that already exit inside it in a text file with extension '.fc'. files on the desktop with extensions that match those in the '.fc' file will be pulled into 'mis' folder everytime the program runs.
+This is a simple application for organizing desktop space by sorting files based on their extensions into corresponding folders
 
-For example, when the mis folder is empty, running the desktop organizer program will not add any extra content to it. However, if the user drop a file with the extension '.PNG' into it before running the program again, the programm will now pull all files with the extension '.PNG' into the 'mis' folder.
+Folders with [!smart!] included in the name will be recognized as smart folders by the application. A corresponding extbank.fc file is generated in each smart folder holding a list of file extension types of the files exist inside the folder. Files with the same extensions on the desktop as those that already exist inside the smart folder will be pulled inside the folder every time the program is ran.
 
-The mis folder can contain multiple different extensions. To reset the folder, simply delete '.fc' file. The program will create a new '.fc' file the next time it runs.
+To create a smart folder, simply add [!smart!] as part of the folder name then run the program or through the program following the prompt.
+
+Known issues:
+
+- Smart Folder cannot move files that are currently open or being used.
+- When two or more folders contain the same extension type, the files will be automatically moved into the first folder based on alphabetical order
